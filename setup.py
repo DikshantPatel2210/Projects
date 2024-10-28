@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from  typing import List
+from typing import List
 
 HYPEN_E_NOT = "-e ."
 def get_requirements(file_path:str)->List[str]:
@@ -10,7 +10,7 @@ def get_requirements(file_path:str)->List[str]:
     requirements = [ ]
     with open(file_path, 'r') as file_obj:
           requirements = file_obj.readlines()
-          requirements= [req.replace("\n", "")for req in requirements ]
+          requirements= [req.replace("\n", "") for req in requirements ]
 
           if HYPEN_E_NOT in requirements:
               requirements.remove(HYPEN_E_NOT)
